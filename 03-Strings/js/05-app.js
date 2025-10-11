@@ -6,29 +6,40 @@
 3.charAt() es para acceso directo a caracteres.
 */
 
+// ======= REPLACE =======
 // A. replace(valorBuscado, nuevoValor);
 const producto = 'Libro de Programacion';
 console.log(producto.replace('Programacion', 'Cocina'));  // cambia la palabra programacion por cocina
 /** 
     1.Propósito: Remplazar 'la primera coincidencia' de un substring o patrón (expresión regular) en un string.
     2.Retorna: Un nuevo string con el remplazo aplicado.
-    3.Características: - Si 'valorBuscado' es un string, solo replaza la 'primera coincidenci'.
+    3.Características: - Si 'valorBuscado' es un string, solo replaza la 'primera coincidencia'.
                        - Si 'valorBuscando' es una expresíon regular(regex) con el flag '/g', remplaza 'todas las coincidenciaso'.
                        -'No modifica el string original'(los strings en JavaScript son 'inmutables').
     4.Función: Remplaza una parte de un string por otro.
     5.Sintaxis: ---> string.replace(valorBuscado, nuevoValor).
 */
-// NOTA: No solo remplaza la primera coincidencia. Para remplazar todas, usan una expresión regular con flag 'g'.
+
+
+
+// ==== ¿Que es un flag? ====
+/**
+En expresiones regulares, las 'flags' son modificadores que cambian cómo funciona la búsqueda. Van después de la última barra ' / ' en la expresión regular.
+*/
 let texto = 'Perro, Gato, Perro';
 let nuevoTexto = texto.replace(/Perro/g, 'Lince');
 console.log(nuevoTexto);  //   'Lince, Gato, Lince';
 
+// NOTA: No solo remplaza la primera coincidencia. Para remplazar todas, usan una expresión regular con flag 'g'.
 
+
+
+// ======= SLICE =======
 // B. slice(incio, fin)
 const nombre = 'Tengo la mejor gata del mundo';
 console.log(nombre.slice(0, 10));   //  'Tengo la me'
 console.log(nombre.slice(8));       //  'mejor gata del mundo'
-console.log(nombre.slice(2, 1));    //   empty string
+console.log(nombre.slice(2, 1));    //   empty string 
 /**
     1.Propósito: Extraer una parte del string(desde 'inicio' hasta 'fin', sin incluir 'fin'). 
     2.Retorna: Un nuevo string con la parte extraída.
@@ -40,9 +51,11 @@ console.log(nombre.slice(2, 1));    //   empty string
 */
 // NOTA: Índices negativos cuentan hasta el final
 let lenguaje = 'JavaScript';
-console.log(lenguaje.slice(-6, -1));   // Script 
+console.log(lenguaje.slice(-6, -1));   // Scrip 
 
 
+
+// ======= SUBTRING =======
 // C. substring(incio, fin)
 const frase = 'Pedrito clavo un clavito';
 console.log(frase.substring(0, 10));   // Pedrito cl
@@ -57,6 +70,7 @@ console.log(frase.substring(2, 1));    // e
 let str = 'JavaScript';
 console.log(str.substring(4, 0));  // 'Java' (intercambia 4 y 0)
 console.log(str.substring(-3));    // 'JavaScript' (negativo se trata como 0)
+console.log()
 /**
     4.Función: Similiar a slice, pero no acepta indices negativos.
     5.Sintaxis: ---> string.substring(incio, fin).
@@ -68,12 +82,16 @@ let txt = 'World Of Warcraft Classic';
 console.log(txt.substring(10, 4));  //    d Of W
 console.log(txt.slice(10, 4));      // '' vacio
 
-
+// ======= CHARAT =======
 // D. charAt(posición)
 const usuario = 'Juan';
 console.log(usuario.charAt(0));  // J
-console.log(usuario[2]);         // a  alternativa moderna 
+console.log(usuario[2]);         // a  alternativa moderna
+
 // Diferencia: charAt() devuelve un string si el indice no existe, mientras que [] devuelve 'undefined'.
+console.log(usuario.charAt(10));  // '' string vacio
+console.log(usuario[10]);         // undefined
+
 /**
     1.Propósito: Obtener un carácter específico de un string.
     2.Retorna: - El carácter en la posición indicada(como un string).
