@@ -9,7 +9,7 @@ console.log(producto.concat('En descuento'));    // Chocolate Iberica En descuen
 
 //  con signo suma '+'
 const galleta = 'Oreo';
-const stock = '30 unidades';
+const stock = '30 unidades';    
 
 console.log('El producto ' + galleta + 'la cantidad es de: ' + stock );
 
@@ -32,7 +32,7 @@ const texto = "Linea 1\n" +
               "Linea 2\n" +
               "linea 3";
 //con template string
-const texto2     = `Linea 1
+const texto2 = `Linea 1
 linea 2
 linea 3`;
 

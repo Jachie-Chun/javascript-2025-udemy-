@@ -9,9 +9,9 @@ const producto = {
 }
 
 const { nombre, precio, disponible } = producto;
-console.log(nombre);
-console.log(precio);
-console.log(disponible);
+console.log(nombre);  // pc gamer
+console.log(precio);  // 100
+console.log(disponible);  // true
 
 
 // otros ejemplos con array

@@ -1,4 +1,4 @@
-// METODOS - includes y length
+ // METODOS - includes y length
 
 const producto = 'Monitor LG XXL';
 console.log(producto);  // Monitor LG XXL

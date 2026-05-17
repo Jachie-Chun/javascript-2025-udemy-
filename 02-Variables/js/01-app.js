@@ -24,7 +24,6 @@ var nombre = 'Gonzalo',
   edad = 19;
 
 /**
-
 === Caracteristicas ===
 
 1. Ámbito de función(function scope)
